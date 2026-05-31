@@ -1,0 +1,605 @@
+/*------------------------------------------------------------------
+    File Name: custom.css
+-------------------------------------------------------------------*/
+
+/* Counter Sections / Statistics Cards */
+.counter_section {
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--border-radius-md) !important;
+    box-shadow: var(--shadow-sm) !important;
+    padding: 24px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    display: flex !important;
+    align-items: center !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.counter_section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--accent-color);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.counter_section:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-premium) !important;
+    border-color: rgba(99, 102, 241, 0.2) !important;
+}
+
+.counter_section:hover::before {
+    opacity: 1;
+}
+
+.couter_icon {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: var(--border-radius-sm) !important;
+    background: rgba(99, 102, 241, 0.1) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-right: 20px !important;
+    float: none !important;
+}
+
+.couter_icon i {
+    font-size: 24px !important;
+    color: var(--accent-color) !important;
+}
+
+.counter_section .counter_no {
+    float: none !important;
+    width: auto !important;
+}
+
+.counter_section .counter_no p.total_no {
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 32px !important;
+    font-weight: 700 !important;
+    color: var(--text-primary) !important;
+    line-height: 1 !important;
+    margin-bottom: 6px !important;
+}
+
+.counter_section .counter_no p.head_couter {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: var(--text-secondary) !important;
+    margin: 0 !important;
+    line-height: 1.4 !important;
+}
+
+.counter_section .counter_no a.btn {
+    margin-top: 10px;
+    background: transparent !important;
+    border: 1px solid var(--accent-color) !important;
+    color: var(--accent-color) !important;
+    border-radius: var(--border-radius-sm) !important;
+    font-weight: 600 !important;
+    padding: 4px 12px !important;
+    font-size: 12px !important;
+    transition: all 0.2s ease;
+}
+
+.counter_section .counter_no a.btn:hover {
+    background: var(--accent-color) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+}
+
+/* Premium Form Styling */
+.login_section {
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--border-radius-lg) !important;
+    box-shadow: var(--shadow-premium) !important;
+    padding: 40px !important;
+    width: 100%;
+    max-width: 450px;
+}
+
+.logo_login {
+    background: transparent !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    padding-bottom: 20px !important;
+    margin-bottom: 30px !important;
+}
+
+.logo_login h3 {
+    color: var(--text-primary) !important;
+    font-size: 26px !important;
+    font-weight: 800 !important;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+.login_form .field {
+    margin-bottom: 24px !important;
+    display: block !important;
+}
+
+.login_form .field label.label_field {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: var(--text-secondary) !important;
+    margin-bottom: 8px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: auto !important;
+    float: none !important;
+}
+
+.form-control {
+    background: var(--bg-primary) !important;
+    border: 1.5px solid var(--border-color) !important;
+    border-radius: var(--border-radius-sm) !important;
+    color: var(--text-primary) !important;
+    padding: 12px 16px !important;
+    height: auto !important;
+    font-size: 14px !important;
+    transition: all 0.2s ease !important;
+}
+
+.form-control:focus {
+    background: #fff !important;
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1) !important;
+}
+
+/* Modern Reusable Buttons */
+.main_bt, .btn-primary {
+    background: var(--accent-color) !important;
+    border: none !important;
+    color: #fff !important;
+    padding: 12px 24px !important;
+    font-weight: 600 !important;
+    border-radius: var(--border-radius-sm) !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15) !important;
+    cursor: pointer;
+}
+
+.main_bt:hover, .btn-primary:hover {
+    background: var(--accent-hover) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.25) !important;
+}
+
+.main_bt:active, .btn-primary:active {
+    transform: translateY(0);
+}
+
+.forgot {
+    color: var(--accent-color) !important;
+    font-weight: 500;
+    font-size: 13px !important;
+    margin-top: 10px;
+    display: inline-block;
+    transition: color 0.2s ease;
+}
+
+.forgot:hover {
+    color: var(--accent-hover) !important;
+    text-decoration: underline !important;
+}
+
+/* Stylish Tables */
+.table_section {
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--border-radius-md) !important;
+    box-shadow: var(--shadow-sm) !important;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.table {
+    margin: 0 !important;
+}
+
+.table thead th {
+    background: var(--bg-primary) !important;
+    color: var(--text-secondary) !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    font-size: 12px !important;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--border-color) !important;
+    padding: 16px 24px !important;
+}
+
+.table tbody td {
+    padding: 18px 24px !important;
+    vertical-align: middle !important;
+    border-top: 1px solid var(--border-color) !important;
+    font-size: 14px !important;
+    color: var(--text-primary) !important;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(99, 102, 241, 0.02) !important;
+}
+
+/* Modern Badge / Pill Styling */
+.badge {
+    padding: 6px 12px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    border-radius: 50px !important;
+}
+
+.badge-success {
+    background-color: rgba(34, 197, 94, 0.1) !important;
+    color: #16a34a !important;
+}
+
+.badge-warning {
+    background-color: rgba(234, 179, 8, 0.1) !important;
+    color: #ca8a04 !important;
+}
+
+.badge-danger {
+    background-color: rgba(239, 68, 68, 0.1) !important;
+    color: #dc2626 !important;
+}
+
+/* Premium Card Panels */
+.white_shd {
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--border-radius-md) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+.full.graph_head {
+    background: var(--bg-secondary) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    padding: 20px 24px !important;
+}
+
+.full.graph_head h2 {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+}
+
+/* Inner Page Enhancements */
+.midde_cont {
+    padding: 30px !important;
+    margin-top: 70px !important;
+}
+
+.page_title {
+    background: transparent !important;
+    padding: 0 0 20px 0 !important;
+    border-bottom: none !important;
+}
+
+.page_title h2 {
+    font-size: 28px !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.5px;
+}
+
+/* ==========================================
+   Restructured Clean Form Styling Overrides
+========================================== */
+
+/* Premium radial gradient background for login screens */
+body.inner_page.login {
+    background: radial-gradient(circle at 50% 50%, #f8fafc 0%, #e2e8f0 100%) !important;
+}
+
+/* Ensure the wrapper is scrollable if content overflows 100vh (especially on registration) */
+.full_height {
+    min-height: 100vh !important;
+    height: auto !important;
+    padding: 60px 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+}
+
+/* Redesign the login/registration card */
+.login_section {
+    max-width: 600px !important;
+    width: 100% !important;
+    min-height: auto !important;
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    border-radius: var(--border-radius-lg) !important;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08) !important;
+    margin: 0 auto !important;
+    overflow: visible !important; /* Allow focus glows and shadows to render fully */
+}
+
+/* Hide original template's card header banner */
+.logo_login {
+    display: none !important;
+}
+
+/* Body of the login/registration form */
+.login_form {
+    padding: 45px !important;
+    float: none !important;
+    width: 100% !important;
+}
+
+/* Title & Header inside card */
+.form_title_container {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.form_title_container h2 {
+    color: var(--text-primary) !important;
+    font-size: 26px !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.75px;
+    margin-bottom: 6px !important;
+    text-transform: none !important;
+}
+
+.form_title_container p {
+    color: var(--text-secondary) !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+}
+
+/* Vertical Form Group stack */
+.form-group {
+    margin-bottom: 20px !important;
+    width: 100% !important;
+    display: block !important;
+    float: none !important;
+}
+
+.form_label {
+    color: var(--text-secondary) !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 6px !important;
+    display: inline-block !important;
+    width: auto !important;
+    float: none !important;
+    text-align: left !important;
+}
+
+.form_input {
+    width: 100% !important;
+    float: none !important;
+    border: 1.5px solid var(--border-color) !important;
+    border-radius: var(--border-radius-sm) !important;
+    background: var(--bg-primary) !important;
+    padding: 12px 16px !important;
+    height: auto !important;
+    font-size: 14px !important;
+    color: var(--text-primary) !important;
+    transition: all 0.2s ease !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    margin: 0 !important;
+}
+
+.form_input:focus {
+    border-color: var(--accent-color) !important;
+    background: #fff !important;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1) !important;
+    outline: none !important;
+}
+
+/* File Upload Field */
+.file_input {
+    background: #fff !important;
+    padding: 8px 12px !important;
+    border-style: dashed !important;
+    border-color: var(--text-muted) !important;
+}
+
+/* Space-between Flex Row */
+.form_row {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-bottom: 24px !important;
+}
+
+.form_row .form-check-label {
+    display: flex !important;
+    align-items: center !important;
+    font-size: 14px !important;
+    color: var(--text-secondary) !important;
+    margin: 0 !important;
+    cursor: pointer !important;
+}
+
+.form_row .form-check-label input {
+    margin: 0 8px 0 0 !important;
+    width: 16px !important;
+    height: 16px !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+}
+
+.form_row .forgot {
+    margin: 0 !important;
+}
+
+/* Submit Button & Footer Link */
+.btn_submit {
+    width: 100% !important;
+    padding: 14px !important;
+    font-size: 15px !important;
+    margin-bottom: 10px !important;
+}
+
+.form_footer {
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    padding-top: 18px;
+    margin-top: 15px;
+}
+
+.form_footer .forgot {
+    margin: 0 !important;
+    display: inline-block;
+}
+
+.form_footer .divider {
+    color: var(--border-color);
+    margin: 0 12px;
+}
+
+/* ==========================================================================
+   LOGIN & REGISTRATION FORM RESPONSIVE OVERRIDES
+   ========================================================================== */
+
+/* ---- TABLET (≤991px) ---- */
+@media (max-width: 991px) {
+    .login_section {
+        max-width: 500px !important;
+    }
+
+    .login_form {
+        padding: 35px 30px !important;
+    }
+}
+
+/* ---- MOBILE (≤767px) ---- */
+@media (max-width: 767px) {
+    .full_height {
+        padding: 30px 15px !important;
+        min-height: 100vh !important;
+    }
+
+    .login_section {
+        max-width: calc(100% - 20px) !important;
+        margin: 0 auto !important;
+    }
+
+    .login_form {
+        padding: 28px 20px !important;
+    }
+
+    .form_title_container h2 {
+        font-size: 22px !important;
+    }
+
+    .form_title_container p {
+        font-size: 13px !important;
+    }
+
+    .form_title_container {
+        margin-bottom: 22px !important;
+    }
+
+    /* Registration 2-column -> single column */
+    .login_form .row > [class*="col-md-6"] {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+/* ---- SMALL MOBILE (≤575px) ---- */
+@media (max-width: 575px) {
+    .login_section {
+        max-width: 100% !important;
+        border-radius: 12px !important;
+        box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06) !important;
+    }
+
+    .login_form {
+        padding: 24px 16px !important;
+    }
+
+    .form_title_container h2 {
+        font-size: 20px !important;
+    }
+
+    .form-group {
+        margin-bottom: 16px !important;
+    }
+
+    .form_label {
+        font-size: 11px !important;
+        letter-spacing: 0.3px !important;
+    }
+
+    .form_input, .form-control {
+        padding: 10px 12px !important;
+        font-size: 14px !important;
+    }
+
+    /* File upload field compact */
+    .file_input {
+        padding: 6px 10px !important;
+        font-size: 13px !important;
+    }
+
+    /* Form row (remember me + forgot) stacks vertically */
+    .form_row {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px !important;
+    }
+
+    .btn_submit {
+        padding: 12px !important;
+        font-size: 14px !important;
+    }
+
+    .form_footer {
+        padding-top: 14px !important;
+        margin-top: 12px !important;
+    }
+
+    .form_footer .forgot {
+        font-size: 12px !important;
+    }
+}
+
+/* ---- EXTRA SMALL MOBILE (≤480px) ---- */
+@media (max-width: 480px) {
+    .full_height {
+        padding: 20px 8px !important;
+    }
+
+    .login_form {
+        padding: 20px 14px !important;
+    }
+
+    .form_title_container h2 {
+        font-size: 18px !important;
+    }
+
+    .form_title_container p {
+        font-size: 12px !important;
+    }
+
+    .form_input, .form-control {
+        padding: 9px 10px !important;
+        font-size: 13px !important;
+    }
+
+    .form_label {
+        font-size: 10px !important;
+    }
+
+    .btn_submit {
+        padding: 11px !important;
+        font-size: 13px !important;
+    }
+}

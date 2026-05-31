@@ -1,0 +1,17 @@
+# PHP Runtime / Binaries
+php/
+*.exe
+*.dll
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Sensitive Database or Config backups (if any)
+*.sql.gz
+*.bak
